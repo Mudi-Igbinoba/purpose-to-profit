@@ -5,6 +5,7 @@ import ThankYou from './pages/ThankYou';
 import Index from './pages/Index';
 import { TooltipProvider } from './components/ui/tooltip';
 import { Toaster } from './components/ui/sonner';
+import { Analytics } from '@vercel/analytics/next';
 function App() {
   const queryClient = new QueryClient();
   return (
@@ -19,6 +20,7 @@ function App() {
 
             <Route path='*' element={<NotFound />} />
           </Routes>
+          <Analytics />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
