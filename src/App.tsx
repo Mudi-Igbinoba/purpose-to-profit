@@ -5,7 +5,7 @@ import ThankYou from './pages/ThankYou';
 import Index from './pages/Index';
 import { TooltipProvider } from './components/ui/tooltip';
 import { Toaster } from './components/ui/sonner';
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   const queryClient = new QueryClient();
   return (
