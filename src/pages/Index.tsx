@@ -1,5 +1,5 @@
 import About from '@/components/About';
-import Coach from '@/components/Coach';
+// import Coach from '@/components/Coach';
 import Coaches from '@/components/Coaches';
 import Curriculum from '@/components/Curriculum';
 import FAQ from '@/components/FAQ';
