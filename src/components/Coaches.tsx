@@ -10,7 +10,7 @@ const Coaches = () => {
       name: 'Elisha Joseph',
       role: 'Founder, Purpose to Profit Coaching',
       description:
-        '⁠Elisha has dedicated over a decade to equipping individuals and leaders to live with clarity, purpose, and impact. A purpose coach, and One Young World Ambassador, he has empowered thousands through The Becoming and The Kingdom Luminaries Network. As the Founder and Lead Coach of the Purpose to Profit Global Coaching Program, he helps professionals transform purpose into profit and lasting influence.',
+        '⁠Elisha has dedicated about a decade to equipping individuals and leaders to live with clarity, purpose, and impact. A purpose coach, and One Young World Ambassador, he has empowered thousands through The Becoming and The Kingdom Luminaries Network. As the Founder and Lead Coach of the Purpose to Profit Global Coaching Program, he helps professionals transform purpose into profit and lasting influence.',
       image: elishaImage
     },
     {
@@ -44,7 +44,8 @@ const Coaches = () => {
             Meet Your Coaches
           </h2>
           <p className='text-lg text-muted-foreground'>
-            Learn from globally recognized experts in purpose-driven leadership.
+            Learn from a network of proven leaders shaping purpose-driven
+            impact.
           </p>
         </div>
 

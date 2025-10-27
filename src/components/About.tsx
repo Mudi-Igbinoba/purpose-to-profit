@@ -34,8 +34,10 @@ const About = () => {
             The Purpose To Profit Global Coaching Program is a transformative
             4-week journey designed for visionary leaders who are ready to step
             into their full potential. Through deep introspection, strategic
-            planning, and actionable frameworks, you'll discover how to lead
-            with clarity, purpose, and global impact.
+            planning, and actionable frameworks, you’ll discover how to lead
+            with clarity, purpose, and global impact — while learning to
+            monetize your unique gifts, turn your purpose into profitable
+            solutions, and build a life of both meaning and financial success
           </p>
         </div>
 
@@ -63,17 +65,11 @@ const About = () => {
           <ul className='space-y-3 text-muted-foreground'>
             <li className='flex items-start gap-3'>
               <span className='text-accent text-xl'>✓</span>
-              <span>
-                Weekly live group coaching sessions with intimate cohort sizes
-                for personalized attention
-              </span>
+              <span>Weekly live group coaching sessions</span>
             </li>
             <li className='flex items-start gap-3'>
               <span className='text-accent text-xl'>✓</span>
-              <span>
-                One-on-one strategy sessions to address your unique leadership
-                challenges
-              </span>
+              <span>Q&A sessions to address your unique challenges</span>
             </li>
             <li className='flex items-start gap-3'>
               <span className='text-accent text-xl'>✓</span>

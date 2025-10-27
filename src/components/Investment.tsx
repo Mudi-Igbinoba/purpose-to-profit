@@ -1,6 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import clsx from 'clsx';
+import { differenceInDays } from 'date-fns';
 import { Check, Clock } from 'lucide-react';
+import { useEffect, useState } from 'react';
 // import { useNavigate } from 'react-router';
 
 const Investment = () => {
@@ -10,11 +13,19 @@ const Investment = () => {
   //   navigate('/thank-you');
   // };
 
+  const [daysRemaining, setDaysRemaining] = useState<number>(0);
+
+  useEffect(() => {
+    const deadline = new Date('2025-11-15T23:59:59');
+    const now = new Date();
+    const days = differenceInDays(deadline, now);
+    setDaysRemaining(days > 0 ? days : 0);
+  }, []);
+
   const included = [
     '4 weeks of intensive group coaching sessions',
-
     'Lifetime access to all program materials',
-    'Proprietary leadership frameworks and tools',
+    'Proprietary frameworks and tools',
     'Access to exclusive alumni community',
     'Monthly Q&A sessions for 6 months post-program',
     'Personalized action plan and roadmap',
@@ -48,19 +59,50 @@ const Investment = () => {
             <div className='sm:px-8 px-6 pb-4 pt-4 bg-card'>
               <div className='text-center mb-8'>
                 <div className='flex items-center justify-center gap-4 mb-4'>
-                  <span className='text-3xl text-muted-foreground line-through'>
+                  <span
+                    className={clsx('', {
+                      'line-through text-3xl text-muted-foreground':
+                        daysRemaining > 0,
+                      'text-5xl font-bold text-accent': daysRemaining < 1
+                    })}
+                  >
                     ₦50,000
                   </span>
-                  <span className='text-5xl font-bold text-accent'>
+                  <span
+                    className={clsx('text-5xl font-bold text-accent', {
+                      hidden: daysRemaining < 1
+                    })}
+                  >
                     ₦35,000
                   </span>
                 </div>
-                <p className='text-sm text-muted-foreground mb-2'>
+                <p
+                  className={clsx('text-sm text-muted-foreground mb-2', {
+                    hidden: daysRemaining < 1
+                  })}
+                >
                   Limited-time founding member rate
                 </p>
-                <div className='inline-flex items-center gap-2 bg-gold/10 text-gold-foreground px-4 py-2 rounded-full text-sm font-semibold'>
-                  <Clock className='h-4 w-4' />
-                  Offer expires in 7 days
+                <div className='flex flex-col items-center gap-2 mb-2'>
+                  <div
+                    className={clsx(
+                      'items-center gap-2 bg-gold/10 text-gold-foreground px-4 py-2 rounded-full text-sm font-semibold',
+                      {
+                        hidden: daysRemaining < 1,
+                        'inline-flex': daysRemaining > 0
+                      }
+                    )}
+                  >
+                    <Clock className='h-4 w-4' />
+                    {daysRemaining > 0
+                      ? `Offer expires in ${daysRemaining} ${
+                          daysRemaining === 1 ? 'day' : 'days'
+                        }`
+                      : 'Offer expired'}
+                  </div>
+                  <p className='text-sm font-semibold text-foreground'>
+                    Program starts: November 28th, 2025
+                  </p>
                 </div>
               </div>
 
