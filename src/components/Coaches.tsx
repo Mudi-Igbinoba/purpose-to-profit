@@ -1,8 +1,8 @@
 import { Card } from '@/components/ui/card';
-import etseImage from '@/assets/etse.png';
-import mordecaiImage from '@/assets/mordecai.png';
-import elishaImage from '@/assets/elisha.png';
-import azubuikeImage from '@/assets/azubuike.png';
+import etseImage from '@/assets/etse.svg';
+import mordecaiImage from '@/assets/mordecai.svg';
+import elishaImage from '@/assets/elisha.svg';
+import azubuikeImage from '@/assets/azubuike.svg';
 
 const Coaches = () => {
   const coaches = [
