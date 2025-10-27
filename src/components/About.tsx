@@ -11,9 +11,9 @@ const About = () => {
     },
     {
       icon: TrendingUp,
-      title: 'Global Influence',
+      title: 'Profit from Your Strengths',
       description:
-        'Amplify your impact and expand your reach to create meaningful change on a global scale.'
+        'Learn practical strategies to turn your natural talents into income-generating opportunities.'
     },
     {
       icon: Users,

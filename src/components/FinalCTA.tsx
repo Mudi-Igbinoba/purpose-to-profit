@@ -42,7 +42,7 @@ const FinalCTA = () => {
               <p className='text-primary-foreground/80'>Leaders Transformed</p>
             </div>
             <div>
-              <p className='text-4xl font-bold mb-2'>6</p>
+              <p className='text-4xl font-bold mb-2'>3</p>
               <p className='text-primary-foreground/80'>Continents Reached</p>
             </div>
             <div>

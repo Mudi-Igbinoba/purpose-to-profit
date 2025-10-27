@@ -1,30 +1,38 @@
 import { Card } from '@/components/ui/card';
-import alexandraImage from '@/assets/alexandra-sterling.jpg';
-import marcusImage from '@/assets/marcus-chen.jpg';
-import sarahImage from '@/assets/sarah-thompson.jpg';
+import etseImage from '@/assets/etse.png';
+import mordecaiImage from '@/assets/mordecai.png';
+import elishaImage from '@/assets/elisha.png';
+import azubuikeImage from '@/assets/azubuike.png';
 
 const Coaches = () => {
   const coaches = [
     {
-      name: 'Elisha Oreunomhe',
-      role: 'Founder & Lead Coach',
+      name: 'Elisha Joseph',
+      role: 'Founder, Purpose to Profit Coaching',
       description:
-        'Alexandra has dedicated her career to helping visionary leaders discover their purpose and amplify their global influence. With over two decades of experience working with Fortune 500 executives, social entrepreneurs, and change-makers worldwide.',
-      image: alexandraImage
+        '⁠Elisha has dedicated over a decade to equipping individuals and leaders to live with clarity, purpose, and impact. A purpose coach, and One Young World Ambassador, he has empowered thousands through The Becoming and The Kingdom Luminaries Network. As the Founder and Lead Coach of the Purpose to Profit Global Coaching Program, he helps professionals transform purpose into profit and lasting influence.',
+      image: elishaImage
     },
     {
-      name: 'Marcus Chen',
-      role: 'Senior Executive Coach',
+      name: '⁠Dr. Azubuike Ezenwoke',
+      role: 'Leadership Coach',
       description:
-        'Marcus specializes in leadership transformation and organizational culture. His background in both corporate strategy and mindfulness practices brings a unique perspective to executive development and team dynamics.',
-      image: marcusImage
+        'Dr. Azubuike has dedicated over two decades to empowering professionals to lead with purpose and impact. As Director of the African Leadership Development Academy and Founder of Lifematics, he has transformed hundreds of individuals through his innovative, faith-based leadership frameworks.',
+      image: azubuikeImage
     },
     {
-      name: 'Sarah Thompson',
-      role: 'Leadership Development Coach',
+      name: 'Coach Mordecai Orimiladeye',
+      role: 'Life Coach',
       description:
-        'Sarah focuses on emerging leaders and executive presence. With expertise in communication and emotional intelligence, she helps leaders develop authentic leadership styles that inspire and motivate their teams.',
-      image: sarahImage
+        'Coach Mordecai is a certified life coach, author, and digital entrepreneur passionate about helping individuals and organizations align with purpose, unlock potential, and achieve sustainable success. As the visionary behind Teens on Purpose Int’l, he has impacted over 70,000 teens and young adults across 100+ countries through transformative initiatives and platforms including Mordivate, MordyQuotes, and TOP Conferences.',
+      image: mordecaiImage
+    },
+    {
+      name: '⁠⁠Pharmacist Etseoghena Unuyie-Arowolo',
+      role: 'Serial Entrepreneur',
+      description:
+        'Pharmacist Etseoghena is a trailblazer in gut health, hormonal wellness, and holistic healing. As Founder and CEO of Gudees Global Limited, Africa’s first gut health-focused company and menopause clinic, she has helped over 1,000 individuals heal naturally and achieve optimal wellness. A pharmacist, author, and mindset strategist, she empowers professionals to turn their purpose and expertise into profitable, purpose-driven ventures.',
+      image: etseImage
     }
   ];
 
@@ -40,7 +48,7 @@ const Coaches = () => {
           </p>
         </div>
 
-        <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6'>
           {coaches.map((coach, index) => (
             <Card
               key={index}
@@ -71,7 +79,7 @@ const Coaches = () => {
             When you lead with clarity and authenticity, there are no limits to
             what you can achieve."
           </p>
-          <p className='text-sm font-semibold mt-3'>— Elisha Oreunomhe</p>
+          <p className='text-sm font-semibold mt-3'>— Elisha Joseph</p>
         </div>
       </div>
     </section>

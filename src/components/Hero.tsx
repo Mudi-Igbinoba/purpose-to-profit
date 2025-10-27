@@ -1,12 +1,30 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import heroImage from '@/assets/hero-background.jpg';
+import { useRef } from 'react';
 
 const Hero = () => {
   const scrollToInvestment = () => {
     const element = document.getElementById('investment');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  const scrollToVideo = () => {
+    const element = document.getElementById('hero-video');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Trigger autoplay by updating iframe src
+    if (iframeRef.current) {
+      const currentSrc = iframeRef.current.src;
+      if (!currentSrc.includes('autoplay=1')) {
+        iframeRef.current.src = currentSrc + '&autoplay=1';
+      }
     }
   };
 
@@ -53,6 +71,7 @@ const Hero = () => {
             <Button
               size='lg'
               variant='outline'
+              onClick={scrollToVideo}
               className='bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm text-lg px-8 py-6 transition-smooth'
             >
               <Play className='mr-2 h-5 w-5' />
@@ -61,18 +80,24 @@ const Hero = () => {
           </div>
 
           {/* Video Placeholder */}
+          {/* Video Embed */}
           <div
+            id='hero-video'
             className='max-w-3xl mx-auto bg-card/10 backdrop-blur-sm rounded-lg overflow-hidden shadow-material-xl animate-fade-in'
             style={{ animationDelay: '0.6s' }}
           >
-            <div className='aspect-video bg-primary/20 flex items-center justify-center border border-white/20'>
-              <div className='text-center text-white/80'>
-                <Play className='h-16 w-16 mx-auto mb-4 opacity-60' />
-                <p className='text-lg'>Welcome Video</p>
-                <p className='text-sm'>
-                  Discover how this program will transform your leadership
-                </p>
-              </div>
+            <div className='aspect-video'>
+              <iframe
+                ref={iframeRef}
+                width='100%'
+                height='100%'
+                src='https://www.youtube.com/embed/0oK5aW3uZt4?si=he7IrfqrkGebc6Nv'
+                title='YouTube video player'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                referrerPolicy='strict-origin-when-cross-origin'
+                allowFullScreen
+                className='w-full h-full'
+              />
             </div>
           </div>
         </div>

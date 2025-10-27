@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
+import Logo from '@/assets/logo.png';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,12 +18,13 @@ const Header = () => {
     <header className='sticky top-0 z-50 w-full bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80 border-b border-border shadow-material-sm'>
       <nav className='container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between'>
         <div className='flex items-center'>
-          <h1
+          <img
+            src={Logo}
+            alt='Purpose To Profit'
             onClick={() => scrollToSection('hero')}
-            className='cursor-pointer text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent'
-          >
-            Purpose To Profit
-          </h1>
+            className='cursor-pointer w-7/20 block '
+            // className="h-8 sm:h-10 w-auto"
+          />
         </div>
 
         {/* Desktop Navigation */}

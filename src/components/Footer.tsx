@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -18,12 +18,16 @@ const Footer = () => {
             <div className='space-y-2 text-sm text-primary-foreground/80'>
               <div className='flex items-center gap-2'>
                 <Mail className='h-4 w-4' />
-                <span>info@purposetoprofit.com</span>
+                <span>
+                  <a href='mailto:hello.purposetoprofit@gmail.com'>
+                    hello.purposetoprofit@gmail.com
+                  </a>
+                </span>
               </div>
-              <div className='flex items-center gap-2'>
+              {/* <div className='flex items-center gap-2'>
                 <Phone className='h-4 w-4' />
                 <span>+1 (555) 123-4567</span>
-              </div>
+              </div> */}
               <div className='flex items-center gap-2'>
                 <MapPin className='h-4 w-4' />
                 <span>Global Program (Online)</span>

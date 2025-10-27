@@ -45,14 +45,13 @@ const Curriculum = () => {
     {
       week: 4,
       icon: Calendar,
-      title: 'Sustainable Success & Integration',
+      title: 'Turning Your Passion and Skills into Profitable Solutions',
       description:
-        'Create systems for long-term success and integrate your learnings into daily leadership.',
+        'Learn how to identify and position your core strengths to meet real-world needs.',
       topics: [
-        'Implementation planning',
-        'Building sustainable practices',
-        'Accountability frameworks',
-        'Creating your 90-day action plan'
+        'Discover practical ways to translate service and expertise into income',
+        'Explore frameworks for turning your professional value into a sustainable business or impact model.',
+        'Design an actionable roadmap to monetize your purpose and build long-term profitability.'
       ]
     }
   ];

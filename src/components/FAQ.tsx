@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger
 } from '@/components/ui/accordion';
-import { Button } from '@/components/ui/button';
+// import { Button } from '@/components/ui/button';
 
 const FAQ = () => {
   const faqs = [
@@ -33,16 +33,16 @@ const FAQ = () => {
       answer:
         "You'll receive lifetime access to all materials, join our exclusive alumni community, and get 6 months of monthly Q&A sessions. Many graduates continue with our advanced programs or join our annual leadership retreat."
     },
-    {
-      question: 'Do you offer scholarships or payment plans?',
-      answer:
-        'Yes! We offer flexible payment plans (3 or 6 months) and have a limited number of partial scholarships for nonprofit leaders and social entrepreneurs. Contact us to discuss options.'
-    },
-    {
-      question: 'How big is the cohort?',
-      answer:
-        'We intentionally keep cohorts small—maximum 15-20 participants—to ensure personalized attention, deep connection, and meaningful interactions. This creates an intimate, transformative experience.'
-    },
+    // {
+    //   question: 'Do you offer scholarships or payment plans?',
+    //   answer:
+    //     'Yes! We offer flexible payment plans (3 or 6 months) and have a limited number of partial scholarships for nonprofit leaders and social entrepreneurs. Contact us to discuss options.'
+    // },
+    // {
+    //   question: 'How big is the cohort?',
+    //   answer:
+    //     'We intentionally keep cohorts small—maximum 15-20 participants—to ensure personalized attention, deep connection, and meaningful interactions. This creates an intimate, transformative experience.'
+    // },
     {
       question: "What if I'm not sure I'm ready for 'global influence'?",
       answer:
@@ -80,7 +80,7 @@ const FAQ = () => {
             ))}
           </Accordion>
 
-          <div className='mt-12 text-center bg-card rounded-xl p-8 shadow-material-lg border border-border'>
+          {/* <div className='mt-12 text-center bg-card rounded-xl p-8 shadow-material-lg border border-border'>
             <h3 className='text-xl font-bold mb-3'>Still have questions?</h3>
             <p className='text-muted-foreground mb-6'>
               We're here to help! Schedule a free 15-minute clarity call to
@@ -89,7 +89,7 @@ const FAQ = () => {
             <Button className='gradient-primary text-primary-foreground hover:opacity-90 shadow-material-md'>
               Schedule a Call
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

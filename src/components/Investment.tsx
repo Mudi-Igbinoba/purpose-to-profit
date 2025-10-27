@@ -1,18 +1,18 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Check, Clock, CreditCard } from 'lucide-react';
-import { useNavigate } from 'react-router';
+import { Check, Clock } from 'lucide-react';
+// import { useNavigate } from 'react-router';
 
 const Investment = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleEnroll = () => {
-    navigate('/thank-you');
-  };
+  // const handleEnroll = () => {
+  //   navigate('/thank-you');
+  // };
 
   const included = [
     '4 weeks of intensive group coaching sessions',
-    'Private one-on-one strategy session',
+
     'Lifetime access to all program materials',
     'Proprietary leadership frameworks and tools',
     'Access to exclusive alumni community',
@@ -49,9 +49,11 @@ const Investment = () => {
               <div className='text-center mb-8'>
                 <div className='flex items-center justify-center gap-4 mb-4'>
                   <span className='text-3xl text-muted-foreground line-through'>
-                    $7,997
+                    ₦50,000
                   </span>
-                  <span className='text-5xl font-bold text-accent'>$4,997</span>
+                  <span className='text-5xl font-bold text-accent'>
+                    ₦35,000
+                  </span>
                 </div>
                 <p className='text-sm text-muted-foreground mb-2'>
                   Limited-time founding member rate
@@ -74,25 +76,29 @@ const Investment = () => {
                 </ul>
               </div>
 
-              <div className='bg-muted/50 rounded-lg p-6 mb-8'>
+              {/* <div className='bg-muted/50 rounded-lg p-6 mb-8'>
                 <h4 className='font-semibold mb-3 flex items-center gap-2'>
                   <CreditCard className='h-5 w-5 text-accent' />
                   Flexible Payment Options
                 </h4>
                 <ul className='space-y-2 text-sm text-muted-foreground'>
-                  <li>• One-time payment: $4,997 (save $500)</li>
-                  <li>• 3 monthly payments: $1,832/month</li>
-                  <li>• 6 monthly payments: $916/month</li>
+                  <li>• One-time payment: ₦35,000 (save ₦500)</li>
+                  <li>• 3 monthly payments: ₦1,832/month</li>
+                  <li>• 6 monthly payments: ₦916/month</li>
                 </ul>
-              </div>
-
-              <Button
-                onClick={handleEnroll}
-                size='lg'
-                className='w-full  bg-accent text-accent-foreground hover:bg-accent/90 shadow-material-lg sm:text-lg text-base py-6 transition-smooth'
+              </div> */}
+              <a
+                href='https://tally.so/r/mVR85M'
+                target='_blank'
+                rel='noopener noreferrer'
               >
-                Enroll Now & Transform Your Leadership
-              </Button>
+                <Button
+                  size='lg'
+                  className='w-full  bg-accent text-accent-foreground hover:bg-accent/90 shadow-material-lg sm:text-lg text-base py-6 transition-smooth'
+                >
+                  Enroll Now & Transform Your Leadership
+                </Button>
+              </a>
 
               <p className='text-center text-sm text-muted-foreground mt-4'>
                 ✓ Secure payment processing ✓ 30-day money-back guarantee
