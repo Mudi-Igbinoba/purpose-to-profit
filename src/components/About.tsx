@@ -11,15 +11,15 @@ const About = () => {
     },
     {
       icon: TrendingUp,
-      title: 'Profit from Your Strengths',
+      title: 'Global Influence',
       description:
-        'Learn practical strategies to turn your natural talents into income-generating opportunities.'
+        'Amplify your impact and expand your reach to create meaningful change on a global scale.'
     },
     {
       icon: Users,
-      title: 'Authentic Leadership',
+      title: 'Profit from Your Strengths',
       description:
-        "Develop a leadership style that's uniquely yours, rooted in authenticity and integrity."
+        'Learn practical strategies to turn your natural talents into income-generating opportunities.'
     }
   ];
 
