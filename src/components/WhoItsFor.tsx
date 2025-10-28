@@ -35,7 +35,7 @@ const WhoItsFor = () => {
           <Card className='p-8 shadow-material-lg border-2 border-accent/30 bg-gradient-to-br from-accent/5 to-transparent'>
             <h3 className='text-2xl font-bold mb-6 flex items-center gap-2'>
               <CheckCircle className='h-6 w-6 text-accent' />
-              This Program Is For You If...
+              This Program is for you if you are...
             </h3>
             <ul className='space-y-4'>
               {idealParticipants.map((participant, index) => (

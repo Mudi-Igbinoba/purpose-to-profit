@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
-import Logo from '@/assets/logo.png';
+import Logo from '@/assets/logo.svg';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ const Header = () => {
             src={Logo}
             alt='Purpose To Profit'
             onClick={() => scrollToSection('hero')}
-            className='cursor-pointer w-7/20 block '
+            className='cursor-pointer lg:w-7/20 sm:w-1/2 w-11/20 block '
             // className="h-8 sm:h-10 w-auto"
           />
         </div>

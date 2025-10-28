@@ -61,17 +61,21 @@ const Investment = () => {
                 <div className='flex items-center justify-center gap-4 mb-4'>
                   <span
                     className={clsx('', {
-                      'line-through text-3xl text-muted-foreground':
+                      'line-through sm:text-3xl text-2xl text-muted-foreground':
                         daysRemaining > 0,
-                      'text-5xl font-bold text-accent': daysRemaining < 1
+                      'sm:text-5xl text-4xl font-bold text-accent':
+                        daysRemaining < 1
                     })}
                   >
                     ₦50,000
                   </span>
                   <span
-                    className={clsx('text-5xl font-bold text-accent', {
-                      hidden: daysRemaining < 1
-                    })}
+                    className={clsx(
+                      'sm:text-5xl text-4xl font-bold text-accent',
+                      {
+                        hidden: daysRemaining < 1
+                      }
+                    )}
                   >
                     ₦35,000
                   </span>
@@ -136,7 +140,7 @@ const Investment = () => {
               >
                 <Button
                   size='lg'
-                  className='w-full  bg-accent text-accent-foreground hover:bg-accent/90 shadow-material-lg sm:text-lg text-base py-6 transition-smooth'
+                  className='w-full sm:whitespace-nowrap whitespace-normal sm:h-10 h-14  bg-accent text-accent-foreground hover:bg-accent/90 shadow-material-lg sm:text-lg text-base py-6 transition-smooth'
                 >
                   Enroll Now & Transform Your Leadership
                 </Button>
