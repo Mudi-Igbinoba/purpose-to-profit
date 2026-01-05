@@ -1,5 +1,7 @@
 import { Button } from '@/components/ui/button';
+import { differenceInDays } from 'date-fns';
 import { ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const FinalCTA = () => {
   const scrollToInvestment = () => {
@@ -8,6 +10,15 @@ const FinalCTA = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+   const [daysRemaining, setDaysRemaining] = useState<number>(0);
+
+  useEffect(() => {
+    const deadline = new Date('2026-01-31T23:59:59');
+    const now = new Date();
+    const days = differenceInDays(deadline, now);
+    setDaysRemaining(days > 0 ? days : 0);
+  }, []);
 
   return (
     <section className='py-20 gradient-primary text-primary-foreground'>
@@ -52,7 +63,7 @@ const FinalCTA = () => {
           </div>
 
           <p className='mt-12 text-sm text-primary-foreground/70'>
-            Next cohort starts in 14 days • Limited to 15 participants •
+            Next cohort starts in {daysRemaining} days • Limited to 15 participants •
             Founding member pricing expires soon
           </p>
         </div>
