@@ -16,7 +16,7 @@ const Investment = () => {
   const [daysRemaining, setDaysRemaining] = useState<number>(0);
 
   useEffect(() => {
-    const deadline = new Date('2026-01-31T23:59:59');
+    const deadline = new Date('2026-02-13T23:59:59');
     const now = new Date();
     const days = differenceInDays(deadline, now);
     setDaysRemaining(days > 0 ? days : 0);
