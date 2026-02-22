@@ -11,10 +11,10 @@ const FinalCTA = () => {
     }
   };
 
-   const [daysRemaining, setDaysRemaining] = useState<number>(0);
+  const [daysRemaining, setDaysRemaining] = useState<number>(0);
 
   useEffect(() => {
-    const deadline = new Date('2026-01-31T23:59:59');
+    const deadline = new Date('2026-03-12T23:59:59');
     const now = new Date();
     const days = differenceInDays(deadline, now);
     setDaysRemaining(days > 0 ? days : 0);
@@ -63,8 +63,8 @@ const FinalCTA = () => {
           </div>
 
           <p className='mt-12 text-sm text-primary-foreground/70'>
-            Next cohort starts in {daysRemaining} days • Limited to 15 participants •
-            Founding member pricing expires soon
+            Next cohort starts in {daysRemaining} days • Limited to 15
+            participants • Founding member pricing expires soon
           </p>
         </div>
       </div>

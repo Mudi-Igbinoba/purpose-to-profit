@@ -16,7 +16,7 @@ const Investment = () => {
   const [daysRemaining, setDaysRemaining] = useState<number>(0);
 
   useEffect(() => {
-    const deadline = new Date('2026-02-13T23:59:59');
+    const deadline = new Date('2026-03-12T23:59:59');
     const now = new Date();
     const days = differenceInDays(deadline, now);
     setDaysRemaining(days > 0 ? days : 0);
@@ -105,7 +105,7 @@ const Investment = () => {
                       : 'Offer expired'}
                   </div>
                   <p className='text-sm font-semibold text-foreground'>
-                    Program starts: February 16th, 2026
+                    Program starts: March 14th, 2026
                   </p>
                 </div>
               </div>
